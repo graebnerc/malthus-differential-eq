@@ -82,7 +82,8 @@ server <- function(input, output) {
                     values_to = "Wert")
       # Visualisierung
      ggplot(pp_data, aes(x=Zeit, y=Wert, color=Art)) +
-       geom_line() + scale_color_icae(palette = "mixed") + 
+       geom_line(key_glyph = draw_key_rect) + 
+       scale_color_viridis_d(begin = 0, end = 0.7) + 
        ggtitle("Lohn- und Bevölkerungsdynamiken") + theme_bw()  +
        theme(legend.text = element_text(size=14), 
              axis.text = element_text(size=12), 
