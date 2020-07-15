@@ -1,10 +1,7 @@
-# This is the standard predator prey model interpreted in the Malthus context
-
 library(shiny)
 library(dplyr)
 library(ggplot2)
 library(tidyr)
-library(icaeDesign)
 
 ui <- fluidPage(
   withMathJax(),
